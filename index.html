@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raghu FerroCastings Pvt Ltd - Quality RCC Products</title>
+    <meta name="description" content="Leading manufacturer of RCC pipes, manhole covers, septic tanks, kerb stones, fencing poles, and drainage solutions in Maharashtra">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        nav li {
+            margin: 0;
+        }
+        
+        nav a {
+            display: block;
+            padding: 1rem 1.5rem;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        nav a:hover {
+            background: #2a5298;
+            color: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(30, 60, 114, 0.8), rgba(42, 82, 152, 0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23cccccc" width="1200" height="400"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 4rem 20px;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        section {
+            padding: 3rem 0;
+        }
+        
+        section h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: #1e3c72;
+        }
+        
+        section > p {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .product-table {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background: #1e3c72;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-info h3 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+        
+        .product-info .size {
+            color: #ff6b35;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-info p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .product-info ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .product-info li {
+            padding: 0.3rem 0;
+            color: #555;
+        }
+        
+        .product-info li:before {
+            content: "✓ ";
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        .features {
+            background: #f9f9f9;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .feature-box h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+        }
+        
+        .contact h2 {
+            color: white;
+        }
+        
+        .contact-info {
+            max-width: 600px;
+            margin: 2rem auto;
+            text-align: center;
+        }
+        
+        .contact-info p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+        
+        .contact-info strong {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav a {
+                border-bottom: 1px solid #eee;
+            }
+            
+            table {
+                font-size: 0.9rem;
+            }
+            
+            th, td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Raghu FerroCastings Pvt Ltd</h1>
+            <p>Plot No. D1, STICE, MH 422112</p>
+            <p>Quality RCC Products Manufacturer</p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#table">Product Table</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="hero" id="home">
+        <h2>Leading Manufacturer of RCC Products</h2>
+        <p>Quality, Durability, and Excellence in Every Product</p>
+        <a href="#contact" class="cta-button">Get a Quote</a>
+    </div>
+    
+    <section id="table" class="container">
+        <h2>Product Range Overview</h2>
+        <p>Quick reference guide to our complete product range</p>
+        
+        <div class="product-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sr No</th>
+                        <th>Product Name</th>
+                        <th>Size/Range</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>RCC Pipes - NP2</td>
+                        <td>300 mm - 1200 mm</td>
+                        <td>Contact for Quote</td>
+                        <td>Non-Pressure pipes for drainage and sewerage systems</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>RCC Pipes - NP3</td>
+                        <td>300 mm - 1200 mm</td>
+                        <td>Contact for Quote</td>
+                        <td>Non-Pressure pipes with higher strength specifications</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>RCC Manhole Covers and Frames</td>
+                        <td>Standard Sizes</td>
+                        <td>Contact for Quote</td>
+                        <td>Durable reinforced concrete manhole covers with frames</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>RCC Wall Compound</td>
+                        <td>Custom Sizes</td>
+                        <td>Contact for Quote</td>
+                        <td>Precast reinforced concrete wall panels for boundaries</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Septic Tanks</td>
+                        <td>450 mm - 1200 mm</td>
+                        <td>Contact for Quote</td>
+                        <td>RCC septic tanks for wastewater treatment</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Kerb Stones</td>
+                        <td>Standard Sizes</td>
+                        <td>Contact for Quote</td>
+                        <td>Concrete kerb stones for road edges and pathways</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Fencing Poles</td>
+                        <td>Standard Heights</td>
+                        <td>Contact for Quote</td>
+                        <td>Reinforced concrete poles for fencing applications</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>V Shape Gutter</td>
+                        <td>Standard Sizes</td>
+                        <td>Contact for Quote</td>
+                        <td>V-shaped concrete drainage gutters for water channeling</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <section id="products" class="container">
+        <h2>Our Products</h2>
+        <p>Explore our comprehensive range of high-quality RCC products</p>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/20dec7ee-5fad-4ab0-b9c8-fffb65c6f3e5/2025-12-01T11-46-54-707Z-4f86b4fa-nano-banana-pro_1764589614573.jpg" alt="RCC Pipes" class="product-image">
+                <div class="product-info">
+                    <h3>RCC Pipes - NP2 & NP3</h3>
+                    <p class="size">Size: 300 mm - 1200 mm</p>
+                    <p>Non-Pressure reinforced concrete pipes for drainage and sewerage systems. Available in NP2 and NP3 grades.</p>
+                    <ul>
+                        <li>High compressive strength</li>
+                        <li>Corrosion resistant</li>
+                        <li>Long service life</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/20dec7ee-5fad-4ab0-b9c8-fffb65c6f3e5/2025-12-01T11-47-10-336Z-7eaff7bb-nano-banana-pro_1764589630246.jpg" alt="Manhole Covers" class="product-image">
+                <div class="product-info">
+                    <h3>RCC Manhole Covers</h3>
+                    <p class="size">Standard Sizes Available</p>
+                    <p>Durable reinforced concrete manhole covers with frames for sewerage and drainage access points.</p>
+                    <ul>
+                        <li>Heavy load bearing</li>
+                        <li>Anti-theft design</li>
+                        <li>Weather resistant</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/20dec7ee-5fad-4ab0-b9c8-fffb65c6f3e5/2025-12-01T11-47-26-135Z-06730c1e-nano-banana-pro_1764589645940.jpg" alt="Wall Compound" class="product-image">
+                <div class="product-info">
+                    <h3>RCC Wall Compound</h3>
+                    <p class="size">Custom Sizes</p>
+                    <p>Precast reinforced concrete wall panels for boundary walls and compound construction.</p>
+                    <ul>
+                        <li>Modular design</li>
+                        <li>Quick installation</li>
+                        <li>Cost-effective</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/20dec7ee-5fad-4ab0-b9c8-fffb65c6f3e5/2025-12-01T11-47-43-190Z-6f78141f-nano-banana-pro_1764589663102.jpg" alt="Septic Tanks" class="product-image">
+                <div class="product-info">
+                    <h3>Septic Tanks</h3>
+                    <p class="size">Size: 450 mm - 1200 mm</p>
+                    <p>RCC septic tanks for wastewater treatment, available in various capacities.</p>
+                    <ul>
+                        <li>Leak-proof construction</li>
+                        <li>Various capacities</li>
+                        <li>Low maintenance</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/20dec7ee-5fad-4ab0-b9c8-fffb65c6f3e5/2025-12-01T11-47-59-310Z-88df1b4a-nano-banana-pro_1764589679093.jpg" alt="Kerb Stones" class="product-image">
+                <div class="product-info">
+                    <h3>Kerb Stones</h3>
+                    <p class="size">Standard Sizes</p>
+                    <p>Concrete kerb stones for road edges, pathways, and landscaping applications.</p>
+                    <ul>
+                        <li>Weather resistant</li>
+                        <li>Uniform dimensions</li>
+                        <li>Aesthetic finish</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/20dec7ee-5fad-4ab0-b9c8-fffb65c6f3e5/2025-12-01T11-48-14-694Z-f5a9584b-nano-banana-pro_1764589694603.jpg" alt="Fencing Poles" class="product-image">
+                <div class="product-info">
+                    <h3>Fencing Poles</h3>
+                    <p class="size">Standard Heights</p>
+                    <p>Reinforced concrete poles for fencing and boundary applications.</p>
+                    <ul>
+                        <li>High strength</li>
+                        <li>Maintenance-free</li>
+                        <li>Durable construction</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/20dec7ee-5fad-4ab0-b9c8-fffb65c6f3e5/2025-12-01T11-48-31-622Z-2dce3936-nano-banana-pro_1764589711543.jpg" alt="V Shape Gutter" class="product-image">
+                <div class="product-info">
+                    <h3>V Shape Gutter</h3>
+                    <p class="size">Standard Sizes</p>
+                    <p>V-shaped concrete drainage gutters for efficient water channeling and drainage systems.</p>
+                    <ul>
+                        <li>Efficient drainage</li>
+                        <li>Easy installation</li>
+                        <li>Low maintenance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <p>Quality, reliability, and excellence in every product we manufacture</p>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Quality Assured</h3>
+                    <p>High-grade concrete and quality steel reinforcement in all products</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">✓</div>
+                    <h3>Industry Standards</h3>
+                    <p>All products comply with industry standards and regulations</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Timely Delivery</h3>
+                    <p>Efficient logistics ensuring on-time delivery to your site</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">💰</div>
+                    <h3>Competitive Pricing</h3>
+                    <p>Best prices with bulk order discounts available</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Custom Solutions</h3>
+                    <p>Custom sizes and specifications available on request</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">📞</div>
+                    <h3>Technical Support</h3>
+                    <p>Expert guidance and support for all your requirements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><strong>Company Name:</strong> Raghu FerroCastings Pvt Ltd</p>
+                <p><strong>Address:</strong> Plot No. D1, STICE, MH 422112</p>
+                <p><strong>For Inquiries:</strong></p>
+                <p>Product pricing and specifications<br>
+                Bulk order discounts<br>
+                Custom size requirements<br>
+                Delivery schedules<br>
+                Technical support</p>
+                <br>
+                <a href="#home" class="cta-button">Back to Top</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Raghu FerroCastings Pvt Ltd. All rights reserved.</p>
+            <p>Quality RCC Products Manufacturer | Maharashtra, India</p>
+        </div>
+    </footer>
+</body>
+</html>
